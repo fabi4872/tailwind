@@ -14,98 +14,105 @@ const Layout = () => {
 
   return (
     <main className="flex">
-      <section className={`relative bg-[#1F2937] h-screen p-4 duration-150 ${(open) ? "w-60" : "w-24"}`}>
-        {
-          (open)
-
-          &&
-
-          
-          <h3 className="absolute top-5 left-4 text-white font-bold uppercase">
-            Mostaza
-          </h3>
-        }
-        
-        <button type="button" className={`absolute top-4 ${(open) ? "right-4" : "right-8 rotate-180"}`} onClick={ onClickMenu }>
-          <IconMenu className="h-8 w-8 bg-white rounded-full hover:text-blue-500" />
-        </button>
-
-
-        
-        <article className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-blue-400 w-full h-12 rounded-md cursor-pointer mt-14 mb-4 ${(open) ? "justify-start" : "justify-center"}`}>
+      <section className={`bg-[#1F2937] h-screen p-4 duration-150 ${(open) ? "w-60" : "w-24"}`}>
+        <header className={`flex items-center ${(open) ? "justify-between" : "justify-center"}`}>
           {
-            (open) 
-            
-            ?
+            (open)
 
-            <>
-              <IconReport className="h-6 w-6 mx-2" />
-              <span>
-                Reportes
-              </span>
-            </>
+            &&
 
-            :
-
-            <IconReport className="h-6 w-6" />
+            <h3 className="uppercase font-bold text-blue-300">
+              Mostaza
+            </h3>
           }
-        </article>
+                        
+          <button type="button" className={`${(!open) && "rotate-180"}`} onClick={ onClickMenu }>
+            <IconMenu className="h-8 w-8 rounded-full bg-white hover:text-blue-600" />
+          </button>
+        </header>
 
-        <article className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-blue-400 w-full h-12 rounded-md cursor-pointer my-4 ${(open) ? "justify-start" : "justify-center"}`}>
-          {
-            (open) 
-            
-            ?
+        <article className="flex flex-col flex-wrap justify-between">
+          <div className="h-auto">
+            <button type="button" className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-purple-300 w-full h-12 rounded-md mt-8 mb-4 ${(open) ? "justify-start" : "justify-center"}`}>
+              {
+                (open)
 
-            <>
-              <IconProduct className="h-6 w-6 mx-2" />
-              <span>
-                Productos
-              </span>
-            </>
+                ?
 
-            :
+                <>
+                  <IconReport className="h-6 w-6 mx-2" />
+                  <span>
+                    Reportes
+                  </span>
+                </>
 
-            <IconProduct className="h-6 w-6" />
-          }
-        </article>
+                :
 
-        <article className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-blue-400 w-full h-12 rounded-md cursor-pointer my-4 ${(open) ? "justify-start" : "justify-center"}`}>
-          {
-            (open) 
-            
-            ?
+                <IconReport className="h-6 w-6" />
+              }
+            </button>
 
-            <>
-              <IconOrder className="h-6 w-6 mx-2" />
-              <span>
-                Pedidos
-              </span>
-            </>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-purple-300 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+              {
+                (open)
 
-            :
+                ?
 
-            <IconOrder className="h-6 w-6" />
-          }
-        </article>
+                <>
+                  <IconProduct className="h-6 w-6 mx-2" />
+                  <span>
+                    Productos
+                  </span>
+                </>
 
-        <article className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-blue-400 w-full h-12 rounded-md cursor-pointer my-4 ${(open) ? "justify-start" : "justify-center"}`}>
-          {
-            (open) 
-            
-            ?
+                :
 
-            <>
-              <IconShipment className="h-6 w-6 mx-2" />
-              <span>
-                Envíos
-              </span>
-            </>
+                <IconProduct className="h-6 w-6" />
+              }
+            </button>
 
-            :
+            <button type="button" className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-purple-300 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+              {
+                (open)
 
-            <IconShipment className="h-6 w-6" />
-          }
+                ?
+
+                <>
+                  <IconOrder className="h-6 w-6 mx-2" />
+                  <span>
+                    Pedidos
+                  </span>
+                </>
+
+                :
+
+                <IconOrder className="h-6 w-6" />
+              }
+            </button>
+
+            <button type="button" className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-purple-300 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+              {
+                (open)
+
+                ?
+
+                <>
+                  <IconShipment className="h-6 w-6 mx-2" />
+                  <span>
+                    Envíos
+                  </span>
+                </>
+
+                :
+
+                <IconShipment className="h-6 w-6" />
+              }
+            </button>
+          </div>
+
+          <button type="button" className="uppercase text-white bg-purple-500 hover:bg-purple-600 rounded-md p-2">
+            Cerrar sesión
+          </button>
         </article>
       </section>
 
