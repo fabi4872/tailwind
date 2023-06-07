@@ -1,7 +1,7 @@
 const IconProduct = () => {
   return (
     <svg 
-      className="h-7 w-7 mx-2"  
+      className="h-6 w-6 mx-2"  
       viewBox="0 0 24 24"  
       fill="none"  
       stroke="currentColor"  

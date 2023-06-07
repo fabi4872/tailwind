@@ -1,7 +1,7 @@
 const IconReport = () => {
   return (
     <svg 
-      className="h-7 w-7 mx-2"  
+      className="h-6 w-6 mx-2"  
       width="24" 
       height="24" 
       viewBox="0 0 24 24" 
