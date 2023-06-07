@@ -1,10 +1,9 @@
-import Titulo from './components/Titulo';
-import './App.css';
+import Layout from './components/Layout';
 
 function App() {
   return (
     <>
-      <Titulo />
+      <Layout />
     </>
   )
 }
