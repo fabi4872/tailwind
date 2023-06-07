@@ -1,7 +1,7 @@
-const IconProduct = () => {
+const IconProduct = ({ ...props }) => {
   return (
     <svg 
-      className="h-6 w-6 mx-2"  
+      { ...props }
       viewBox="0 0 24 24"  
       fill="none"  
       stroke="currentColor"  

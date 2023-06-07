@@ -1,6 +1,7 @@
-const IconShipment = () => {
+const IconShipment = ({ ...props }) => {
   return (
-    <svg className="h-6 w-6 mx-2"  
+    <svg 
+      { ...props }  
       width="24" 
       height="24" 
       viewBox="0 0 24 24" 
