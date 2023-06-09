@@ -4,6 +4,8 @@ import IconOrder from "./Icons/IconOrder";
 import IconProduct from "./Icons/IconProduct";
 import IconReport from "./Icons/IconReport";
 import IconShipment from "./Icons/IconShipment";
+import IconLogout from "./Icons/IconLogout";
+import IconConfiguration from "./Icons/IconConfiguration";
 
 const Layout = () => {
   const [ open, setOpen ] = useState(true);
@@ -13,27 +15,27 @@ const Layout = () => {
   }
 
   return (
-    <main className="flex">
-      <section className={`bg-[#1F2937] h-screen p-4 duration-150 ${(open) ? "w-60" : "w-24"}`}>
+    <main className="flex h-screen">
+      <section className={`bg-[#1F2937] p-4 duration-150 ${(open) ? "w-60" : "w-24"}`}>
         <header className={`flex items-center ${(open) ? "justify-between" : "justify-center"}`}>
           {
             (open)
 
             &&
 
-            <h3 className="uppercase font-bold text-blue-300">
+            <h3 className="uppercase font-bold text-blue-500">
               Mostaza
             </h3>
           }
                         
           <button type="button" className={`${(!open) && "rotate-180"}`} onClick={ onClickMenu }>
-            <IconMenu className="h-8 w-8 rounded-full bg-white hover:text-blue-600" />
+            <IconMenu className="h-8 w-8 rounded-full bg-white hover:text-violet-700" />
           </button>
         </header>
 
         <article className="flex flex-col flex-wrap justify-between">
-          <div className="h-auto">
-            <button type="button" className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-purple-300 w-full h-12 rounded-md mt-8 mb-4 ${(open) ? "justify-start" : "justify-center"}`}>
+          <div>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md mt-6 mb-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
@@ -52,7 +54,7 @@ const Layout = () => {
               }
             </button>
 
-            <button type="button" className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-purple-300 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
@@ -71,7 +73,7 @@ const Layout = () => {
               }
             </button>
 
-            <button type="button" className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-purple-300 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
@@ -90,7 +92,7 @@ const Layout = () => {
               }
             </button>
 
-            <button type="button" className={`flex items-center text-[#98A3A2] font-bold tracking-wider hover:bg-[#111827] hover:text-purple-300 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
@@ -108,11 +110,42 @@ const Layout = () => {
                 <IconShipment className="h-6 w-6" />
               }
             </button>
+
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+              {
+                (open)
+
+                ?
+
+                <>
+                  <IconConfiguration className="h-6 w-6 mx-2" />
+                  <span>
+                    Ajustes
+                  </span>
+                </>
+
+                :
+
+                <IconConfiguration className="h-6 w-6" />
+              }
+            </button>
           </div>
 
-          <button type="button" className="uppercase text-white bg-purple-500 hover:bg-purple-600 rounded-md p-2">
-            Cerrar sesión
-          </button>
+          {
+            (open)
+
+            ?
+
+            <button type="button" className="flex justify-center items-center bottom-4 absolute uppercase text-white bg-blue-500 hover:bg-blue-600 rounded-md py-2 font-semibold duration-150 w-52">
+              Cerrar sesión
+            </button>
+
+            :
+
+            <button type="button" className="flex justify-center items-center bottom-4 absolute uppercase text-white bg-blue-500 hover:bg-blue-600 rounded-md py-2 font-semibold w-16">
+              <IconLogout />
+            </button>
+          }
         </article>
       </section>
 
