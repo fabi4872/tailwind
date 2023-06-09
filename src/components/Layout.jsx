@@ -23,13 +23,13 @@ const Layout = () => {
 
             &&
 
-            <h3 className="uppercase font-bold text-blue-500">
+            <h3 className="uppercase font-bold text-blue-300">
               Mostaza
             </h3>
           }
                         
           <button type="button" className={`${(!open) && "rotate-180"}`} onClick={ onClickMenu }>
-            <IconMenu className="h-8 w-8 rounded-full bg-white hover:text-violet-700" />
+            <IconMenu className="h-8 w-8 text-white hover:text-gray-300 border rounded-md" />
           </button>
         </header>
 
