@@ -29,7 +29,7 @@ const Layout = () => {
           }
                         
           <button type="button" className={`${(!open) && "rotate-180"}`} onClick={ onClickMenu }>
-            <IconMenu className="h-8 w-8 text-white hover:text-gray-300 border rounded-md" />
+            <IconMenu className="h-8 w-8 text-gray-500 hover:text-gray-400 border border-gray-500 rounded-md" />
           </button>
         </header>
 
