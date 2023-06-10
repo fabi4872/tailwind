@@ -1,7 +1,7 @@
 const IconLogout = () => {
   return (
     <svg 
-      className="h-6 w-6 mx-2"
+      className="h-6 w-6"
       width="24" 
       height="24" 
       viewBox="0 0 24 24" 
