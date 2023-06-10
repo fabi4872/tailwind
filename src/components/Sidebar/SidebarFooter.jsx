@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import IconLogout from "../Icons/IconLogout";
 
 const SidebarFooter = ({ open }) => {
@@ -9,6 +10,10 @@ const SidebarFooter = ({ open }) => {
       </button>
     </footer>
   )
+}
+
+SidebarFooter.propTypes = {
+  open: PropTypes.bool
 }
 
 export default SidebarFooter;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import IconMenu from "../Icons/IconMenu";
 
 const SidebarHeader = ({ open, onClickMenu, nameShop }) => {
@@ -13,5 +14,11 @@ const SidebarHeader = ({ open, onClickMenu, nameShop }) => {
     </header>
   );
 }
+
+SidebarHeader.propTypes = {
+  open: PropTypes.bool,
+  onClickMenu: PropTypes.func,
+  nameShop: PropTypes.string
+};
 
 export default SidebarHeader;

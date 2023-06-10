@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import SidebarFooter from "./SidebarFooter";
 import SidebarHeader from "./SidebarHeader";
 import SidebarItemList from "./SidebarItemList";
@@ -12,6 +13,13 @@ const Sidebar = ({ open, onClickMenu, nameShop, sidebarMenuItems }) => {
       </article>
     </section>
   )
+}
+
+Sidebar.propTypes = {
+  open: PropTypes.bool,
+  onClickMenu: PropTypes.func,
+  nameShop: PropTypes.string,
+  sidebarMenuItems: PropTypes.array
 }
 
 export default Sidebar;
