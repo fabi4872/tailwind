@@ -35,7 +35,7 @@ const Layout = () => {
 
         <article className="flex flex-col flex-wrap justify-between">
           <div>
-            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md mt-6 mb-4 ${(open) ? "justify-start" : "justify-center"}`}>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-[#CCC] w-full h-12 rounded-md mt-6 mb-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
@@ -54,7 +54,7 @@ const Layout = () => {
               }
             </button>
 
-            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-[#CCC] w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
@@ -73,7 +73,7 @@ const Layout = () => {
               }
             </button>
 
-            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-[#CCC] w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
@@ -92,7 +92,7 @@ const Layout = () => {
               }
             </button>
 
-            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-[#CCC] w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
@@ -111,7 +111,7 @@ const Layout = () => {
               }
             </button>
 
-            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-violet-400 w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
+            <button type="button" className={`flex items-center text-[#98A3A2] font-medium tracking-wider hover:bg-[#111827] hover:text-[#CCC] w-full h-12 rounded-md my-4 ${(open) ? "justify-start" : "justify-center"}`}>
               {
                 (open)
 
