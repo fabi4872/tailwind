@@ -7,7 +7,7 @@ const Sidebar = ({ open, onClickMenu, nameShop, sidebarMenuItems }) => {
   return (
     <section className={`bg-dark-purple p-4 duration-150 w-24 ${(open) && "md:w-60"}`}>
       <SidebarHeader open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } />
-      <article className="flex flex-col flex-wrap justify-between mt-3">
+      <article className="flex flex-col justify-between mt-3">
         <SidebarItemList sidebarMenuItems={ sidebarMenuItems } open={ open } />
         <SidebarFooter open={ open } /> 
       </article>

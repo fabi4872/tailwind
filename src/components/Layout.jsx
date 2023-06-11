@@ -1,10 +1,12 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 import IconOrder from "./Icons/IconOrder";
 import IconProduct from "./Icons/IconProduct";
 import IconReport from "./Icons/IconReport";
 import IconShipment from "./Icons/IconShipment";
 import IconConfiguration from "./Icons/IconConfiguration";
 import Sidebar from "./Sidebar/Sidebar";
+import Navbar from "./Navbar/Navbar";
 
 const nameShop = "Mostaza";
 const sidebarMenuItems = [
@@ -35,7 +37,7 @@ const sidebarMenuItems = [
   }
 ];
 
-const Layout = () => {
+const Layout = ({ children }) => {
   const [ open, setOpen ] = useState(true);
 
   const onClickMenu = () => {
@@ -45,13 +47,18 @@ const Layout = () => {
   return (
     <main className="flex h-screen">
       <Sidebar open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } sidebarMenuItems={ sidebarMenuItems } />
-      <section className="flex-grow">
-        <nav className="flex flex-wrap justify-end items-center shadow-2xl">
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 py-3 pr-4 text-4xl font-extrabold">TuTi</p>
-        </nav>
+      <section className="flex flex-col justify-start flex-grow">
+        <Navbar />
+        <article className="m-4 border border-gray-300 rounded-md flex-grow">
+          { children }
+        </article>
       </section>
     </main>
   )
+}
+
+Layout.propTypes = {
+  children: PropTypes.element
 }
 
 export default Layout;
