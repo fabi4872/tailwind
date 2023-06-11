@@ -11,27 +11,27 @@ const sidebarMenuItems = [
   {
     id: 1,
     title: "Reportes",
-    component: <IconReport className="h-6 w-6 mx-3 text-blue-400"/>
+    component: <IconReport className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   },
   {
     id: 2,
     title: "Productos",
-    component: <IconProduct className="h-6 w-6 mx-3 text-blue-400"/>
+    component: <IconProduct className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   },
   {
     id: 3,
     title: "Pedidos",
-    component: <IconOrder className="h-6 w-6 mx-3 text-blue-400"/>
+    component: <IconOrder className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   },
   {
     id: 4,
     title: "Envíos",
-    component: <IconShipment className="h-6 w-6 mx-3 text-blue-400"/>
+    component: <IconShipment className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   },
   {
     id: 5,
     title: "Ajustes",
-    component: <IconConfiguration className="h-6 w-6 mx-3 text-blue-400"/>
+    component: <IconConfiguration className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   }
 ];
 
@@ -45,7 +45,10 @@ const Layout = () => {
   return (
     <main className="flex h-screen">
       <Sidebar open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } sidebarMenuItems={ sidebarMenuItems } />
-      <section className="bg-white">
+      <section className="flex-grow">
+        <nav className="flex flex-wrap justify-end items-center shadow-2xl">
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 py-3 pr-4 text-4xl font-extrabold">TuTi</p>
+        </nav>
       </section>
     </main>
   )
