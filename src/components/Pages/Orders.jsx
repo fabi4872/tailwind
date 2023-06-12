@@ -1,9 +1,9 @@
-const Reports = () => {
+const Orders = () => {
   return (
     <div className="p-4 font-bold">
-      Reportes
+      Pedidos
     </div>
   )
 }
 
-export default Reports;
+export default Orders;

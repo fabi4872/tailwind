@@ -1,12 +1,12 @@
-import Layout from "./components/Layout";
-import Reports from "./components/Pages/Reports";
+import { BrowserRouter } from "react-router-dom";
+import Routs from "./config/Routs";
 
 function App() {
   return (
     <>
-      <Layout>
-        <Reports />
-      </Layout>
+      <BrowserRouter>
+        <Routs />    
+      </BrowserRouter>
     </>
   )
 }

@@ -1,9 +1,9 @@
-const Reports = () => {
+const Shipping = () => {
   return (
     <div className="p-4 font-bold">
-      Reportes
+      Envíos
     </div>
   )
 }
 
-export default Reports;
+export default Shipping;

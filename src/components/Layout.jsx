@@ -13,26 +13,31 @@ const sidebarMenuItems = [
   {
     id: 1,
     title: "Reportes",
+    link: "/reportes",
     component: <IconReport className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   },
   {
     id: 2,
     title: "Productos",
+    link: "/productos",
     component: <IconProduct className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   },
   {
     id: 3,
     title: "Pedidos",
+    link: "/pedidos",
     component: <IconOrder className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   },
   {
     id: 4,
     title: "Envíos",
+    link: "/envios",
     component: <IconShipment className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   },
   {
     id: 5,
     title: "Ajustes",
+    link: "/ajustes",
     component: <IconConfiguration className="h-6 w-6 mx-2 text-icon-menu-cyan"/>
   }
 ];
