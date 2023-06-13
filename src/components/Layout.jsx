@@ -7,6 +7,7 @@ import IconShipment from "./Icons/IconShipment";
 import IconConfiguration from "./Icons/IconConfiguration";
 import Sidebar from "./Sidebar/Sidebar";
 import Navbar from "./Navbar/Navbar";
+import { Outlet } from "react-router-dom";
 
 const nameShop = "Mostaza";
 const sidebarMenuItems = [
@@ -56,6 +57,7 @@ const Layout = ({ children }) => {
         <Navbar />
         <article className="m-4 border border-gray-300 rounded-md flex-grow">
           { children }
+          <Outlet />
         </article>
       </section>
     </main>
