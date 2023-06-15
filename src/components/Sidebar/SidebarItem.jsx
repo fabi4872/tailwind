@@ -7,11 +7,11 @@ const SidebarItem = ({ item, open }) => {
   return (
     <button 
       type="button" 
-      className={`flex items-center gap-x-2 text-white font-medium tracking-wider hover:bg-light-white hover:text-[#CCC] w-full h-12 rounded-md my-1 justify-center ${(open) && "md:justify-start"}`}
+      className={`flex items-center gap-x-2 text-white font-medium tracking-wider hover:bg-light-white hover:text-[#CCC] w-full h-12 rounded-md my-1 ${(open) ? "justify-start" : "justify-center"}`}
       onClick={() => {navigate(item.link)}}
       >
       { item.component }
-      <span className={`${!open ? "hidden" : "hidden md:inline"} origin-left`}>
+      <span className={`${!open ? "hidden" : "inline"} origin-left`}>
         { item.title }
       </span>
     </button>

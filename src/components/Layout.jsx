@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import IconOrder from "./Icons/IconOrder";
 import IconProduct from "./Icons/IconProduct";
@@ -45,14 +45,35 @@ const sidebarMenuItems = [
 
 const Layout = ({ children }) => {
   const [ open, setOpen ] = useState(true);
+  const [ isMobile, setIsMobile ] = useState(false);
 
   const onClickMenu = () => {
     setOpen(!open);
   }
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Establece 768 como el ancho máximo para considerar la resolución "md"
+    };
+
+    handleResize(); // Verifica el tamaño de la pantalla al cargar el componente
+
+    window.addEventListener("resize", handleResize); // Escucha los cambios de tamaño de la pantalla
+
+    return () => {
+      window.removeEventListener("resize", handleResize); // Limpia el listener cuando el componente se desmonta
+    };
+  }, []);
+
   return (
     <main className="flex h-screen">
-      <Sidebar open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } sidebarMenuItems={ sidebarMenuItems } />
+      <Sidebar open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } sidebarMenuItems={ sidebarMenuItems } className={`h-screen ${isMobile && open ? "fixed" : ""}`} />
+      <div
+        className={`${
+          isMobile && open ? "fixed" : "hidden"
+        } bg-black bg-opacity-25 inset-0`}
+        onClick={onClickMenu}
+      />
       <section className="flex flex-col justify-start flex-grow">
         <Navbar />
         <article className="m-4 border border-gray-300 rounded-md flex-grow">
