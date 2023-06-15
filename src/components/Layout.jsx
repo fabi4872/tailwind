@@ -66,17 +66,11 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <main className="flex h-screen">
-      <Sidebar open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } sidebarMenuItems={ sidebarMenuItems } className={`h-screen ${isMobile && open ? "fixed" : ""}`} />
-      <div
-        className={`${
-          isMobile && open ? "fixed" : "hidden"
-        } bg-black bg-opacity-25 inset-0`}
-        onClick={onClickMenu}
-      />
+    <main className={`flex h-screen`}>
+      <Sidebar open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } sidebarMenuItems={ sidebarMenuItems } className={`h-screen ${isMobile && open ? "fixed" : ""}`} isMobile={ isMobile } />
       <section className="flex flex-col justify-start flex-grow">
         <Navbar />
-        <article className="m-4 border border-gray-300 rounded-md flex-grow">
+        <article className="m-4 border border-gray-300 rounded-md flex-grow" onClick={(isMobile && open) ? () => onClickMenu() : null}>
           { children }
           <Outlet />
         </article>
