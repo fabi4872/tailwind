@@ -44,8 +44,8 @@ const sidebarMenuItems = [
 ];
 
 const Layout = ({ children }) => {
-  const [ open, setOpen ] = useState(true);
   const [ isMobile, setIsMobile ] = useState(false);
+  const [ open, setOpen ] = useState(!(window.innerWidth < 768));
 
   const onClickMenu = () => {
     setOpen(!open);
@@ -67,10 +67,16 @@ const Layout = ({ children }) => {
 
   return (
     <main className={`flex h-screen`}>
-      <Sidebar open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } sidebarMenuItems={ sidebarMenuItems } className={`h-screen ${isMobile && open ? "fixed" : ""}`} isMobile={ isMobile } />
+      {isMobile && open && (
+        <div
+          className="fixed inset-0 bg-black opacity-25 z-10"
+          
+        ></div>
+      )}
+      <Sidebar open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } sidebarMenuItems={ sidebarMenuItems } className={`h-screen z-20 ${isMobile && open ? "fixed" : ""}`} isMobile={ isMobile } />
       <section className="flex flex-col justify-start flex-grow">
         <Navbar />
-        <article className="m-4 border border-gray-300 rounded-md flex-grow" onClick={(isMobile && open) ? () => onClickMenu() : null}>
+        <article className="m-4 border border-gray-300 rounded-md flex-grow">
           { children }
           <Outlet />
         </article>
