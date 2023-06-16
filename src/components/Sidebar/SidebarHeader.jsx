@@ -3,7 +3,7 @@ import IconMenu from "../Icons/IconMenu";
 
 const SidebarHeader = ({ open, onClickMenu, nameShop }) => {
   return (
-    <header className={`flex items-center justify-center ${open && "justify-between"}`}>
+    <header className={`flex items-center justify-center duration-300 w-16 ${open && "justify-between w-52"}`}>
       <h3 className={`font-bold uppercase text-white ${open ? "inline" : "hidden"}`}>
         { nameShop }
       </h3>

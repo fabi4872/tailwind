@@ -5,9 +5,9 @@ import SidebarItemList from "./SidebarItemList";
 
 const Sidebar = ({ open, onClickMenu, nameShop, sidebarMenuItems, className, isMobile }) => {
   return (
-    <section className={`${className} bg-dark-purple p-4 duration-150 w-24 ${(open && isMobile) && "w-60 fixed inset-0"} ${(open && !isMobile) && "w-60"}`}>
+    <section className={`${className} bg-dark-purple p-4 w-24 duration-300 ${(open && isMobile) && "w-60 fixed inset-0"} ${(open && !isMobile) && "w-60"}`}>
       <SidebarHeader open={ open } onClickMenu={ onClickMenu } nameShop={ nameShop } />
-      <article className="flex flex-col justify-between mt-3">
+      <article className="flex flex-col justify-start mt-3">
         <SidebarItemList sidebarMenuItems={ sidebarMenuItems } open={ open } isMobile={ isMobile } onClickMenu={ onClickMenu } />
         <SidebarFooter open={ open } /> 
       </article>
